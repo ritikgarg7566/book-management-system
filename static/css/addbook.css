@@ -1,0 +1,80 @@
+body{
+
+    background-image: url("/static/image/books1.jpg");
+    background-repeat: no-repeat ;
+    background-size: cover;
+}
+.main{
+    position: relative;
+    width: 40%;
+    height: 500px;
+    background-color: aliceblue;
+    margin-top: 100px;
+    margin-left: 50%;
+    margin-right: 10%;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    
+}
+.header h1{
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.con{
+    width: 100%;
+    position: absolute;
+    top: 130px;
+}
+.container{
+    width: 100%;
+    display: flex;
+}
+.contain{
+    width: 39%;
+    margin-left: 10%;
+    margin-right: 1%;
+}
+.contain2{
+    width: 39%;
+    margin-right: 10%;
+    margin-left: 1%;
+}
+.container label{
+    font-size: 18px;
+}
+.container input{
+    width: 100%;
+    height: 25px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    border: 1px rgb(146, 145, 145) solid;
+}
+#file{
+    border: none;
+}
+.checkbox{
+    width: 80%;
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 360px;
+}
+.but{
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 400px;
+}
+.but input{
+    width: 20%;
+    height: 30px;
+    border-radius: 3px;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+}

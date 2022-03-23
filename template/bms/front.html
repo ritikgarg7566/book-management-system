@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>home page</title>
+  <link rel="stylesheet" href="{% static 'css/frontpage1.css' %}">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="anchor">
+      <a href="front">Home</a>
+      <a href="add_book">Add Book</a>
+      <a href="signup">Signup</a>
+      <a href="signin">Signin</a>
+      {% if p %}
+      <a href="signout2">Signout</a><br>
+      {% endif %}
+    </div>
+    <div class="search">
+      <form action="search2_book" method="POST">
+        {% csrf_token %}
+        <input id="search" type="text" name="title" placeholder="search..">
+        <input class='btn' type="submit" value="search">
+      </form>
+    </div>
+  </div>
+  <div class="header">
+    {% if msg6 %}
+    <div class="msg" id="msg">
+      <h3>{{msg6}}</h3>
+    </div>
+    {% endif %}
+    <div id="head">
+      <h1><span style="font-size: 75px; color:white;">welcome</span><span style="font-size: 40px; color:aliceblue;"> to book
+          directory</span></h1>
+    </div>
+  </div>
+  <div class="table">
+    <h1>{{fname}}</h1>
+    <h1>{{msg}}</h1>
+    <div class="tr">
+      <table>
+        <tr>
+          <th>Book Title</th>
+          <th>Category</th>
+          <th>Download Book</th>
+          <th>File Type</th>
+          <th>Author Name</th>
+          <th>Publisher Name</th>
+          <th>Edit Button</th>
+          <th>Delete Button</th>
+        </tr>
+      </table>
+    </div>
+    <div class="content">
+      <table>
+        {% for i in s %}
+        <tr>
+          <td>{{i.title}}</td>
+          <td>{{i.category}}</td>
+          <td><a class="btn" href="{{i.bookfile.url}}" download>{{i.title}}</a></td>
+          <td>{{i.filetype}}</td>
+          <td>{{i.aname}}</td>
+          <td>{{i.pname}}</td>
+          <td><a class='btn' href="/edit_book?bookid={{i.id}}&username={{i.username}}">edit</a></td>
+          <td><a class='btn' id="delete" href="/delete_book?bookid={{i.id}}&username={{i.username}}">delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  <script src="{% static 'js/front.js' %}"></script>
+</body>
+</html>

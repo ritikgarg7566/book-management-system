@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+  </head>
+  <body>
+    <div class="msg" id="msg">
+      {% for message in messages %}
+            <h3 id="message">{{message}}</h3>
+        {% endfor %}
+    </div>
+    <div class="main">
+      <div class="box1">
+        
+      </div>
+    <div class="box2">
+      <h1>Login</h1>
+    <form  action="login" method="POST">
+      {% csrf_token %}
+      <div class="contain">
+        <label for="">Username</label><br>
+      <input type="text" name="username" required><br>
+
+      <label for="">
+        Password</label><br>
+      <input type="password" name="password" required><br>
+      </div>
+      <div class="reminder">
+        <input type="checkbox">
+        <label for="">Reminder me</label>
+      </div>
+      <div class="but">
+      <input id="reset"type="reset" name="reset">
+      <input id="but2"type="submit" value="login">
+      </div>
+      {{msg}}
+    </form>
+    <div class="bottom">
+      <p>Don't have an account yet? <a href="signup">Register</a></p>
+    </div>
+  </div>
+    </div>
+    <script src="{% static 'js/signin.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>register page</title>
+  <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+</head>
+<body>
+  <div class="msg" id="msg">
+          <h3 id="message">{{msg}}</h3>
+  </div>
+  <div class="main">
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+      <h1>Register</h1>
+      <form action="addsign" method="POST">
+        {% csrf_token %}
+        <div class="container">
+          <div class="contain">
+            <label for="">Username</label><br>
+            <input type="text" name="username" required>
+          </div>
+          <div class="contain2">
+            <label for="">Email Address</label><br>
+            <input type="email" name="email" required>
+          </div>
+        </div>
+        <div class="container">
+          <div class="contain">
+            <label for="">Password</label><br>
+            <input type="password" name="password" required>
+          </div>
+          <div class="contain2">
+            <label for="">Conform Your Password</label><br>
+            <input type="password" name="cpassword" required>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="contain">
+            <label for="">First Name</label><br>
+            <input type="text" name="fname" required>
+
+          </div>
+          <div class="contain2">
+            <label for="">Last Name</label><br>
+            <input type="text" name="lname" required>
+
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox">
+          <label for="">I Agree To The Library Terms of service and Privacy Policy </label>
+        </div>
+
+        <div class="but">
+          <input id='reset' type="reset" name="reset">
+          <input id='submit' type="submit" value="register">
+        </div>
+        <div class="bottom">
+          <p>Already have an account? <a href="signin">Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="{% static 'js/signup.js' %}"></script>
+</body>
+
+</html>

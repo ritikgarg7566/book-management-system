@@ -1,0 +1,162 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(207, 206, 206);
+}
+.navbar{
+    margin-top: 0px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(45, 45, 46);
+    display: flex;
+}
+
+.navbar .anchor{
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+.navbar .search{
+    width: 30%;
+    height: 100%;
+}
+.navbar .anchor a{
+    text-decoration: none;
+    display: block;
+    margin-top: 25px;
+    font-size: 20px;
+    margin-left: 8%;
+    color: aliceblue;
+}
+.navbar .anchor a:hover{
+    color: orangered;
+}
+.navbar .search input{
+    margin-top: 20px;
+    height: 30px;
+    width: 20%;
+}
+#search{
+    margin-left: 25%;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+.search .btn{
+    border: 1px solid green;
+    background-color: green;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.search .btn:hover{
+    background-color: orangered;
+    color: aliceblue;
+}
+
+
+
+.header{
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: 200px;
+    background-image: url("/static/image/book.jpg");
+}
+#head{
+    position: absolute;
+    top: 80px;
+    left: 5%;
+}
+
+
+.table{
+    position: relative;
+    border: 2px black solid;
+    top: 80px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    height: 420px;
+   
+    background-image: url(/static/image/books.jpg);
+}
+.tr{
+    position: absolute;
+    width: 94%;
+    top: 10px;
+    height: 50px;
+    left:3%;
+    right: 3%;
+}
+.tr table{
+    margin-top: 8px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px black solid;
+    border-collapse: collapse;
+}
+.tr table th{
+    border: 1px rgb(80, 78, 78) solid;
+    background-color: rgb(80, 78, 78);
+    width: 9%;
+    height: 30px;
+    color: aliceblue;
+}
+
+
+.content{
+    position: absolute;
+    width: 94%;
+    top: 75px;
+    height: 320px;
+    left:3%;
+    right: 3%;
+    overflow: auto;
+}
+.content table{
+    background-color: aliceblue;
+    text-align: center;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-collapse: collapse;
+}
+.content table td{
+    width: 10%;
+    height: 30px;
+    color: black;
+    font-size: 18px;
+}
+.content table tr:nth-child(odd){
+    border: 1px aliceblue solid;
+    background-color: aliceblue;
+}
+.content table tr:nth-child(even){
+    border: 1px rgb(177, 175, 175) solid;
+    background-color: rgb(168, 167, 167);
+}
+.content .btn{
+    text-decoration: none;
+    color: orangered;
+    font-size: 20px;
+}
+
+
+
+
+.msg{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(245, 178, 200);
+    font-size: 17px;
+    color: rgb(252, 11, 11);
+}
+
+.msg h3{
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right:5% ;
+}

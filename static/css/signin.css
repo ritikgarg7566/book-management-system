@@ -1,0 +1,117 @@
+body{
+    background-image: url(/static/image/book-863418__480.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover
+    
+}
+.main{
+    width: 80%;
+    height: 550px;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+.box1{
+    width: 65%;
+    height: 100%;
+    background-image: url(/static/image/books.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover
+    
+}
+.box2{
+    width: 35%;
+    height: 100%;
+    background-color: aliceblue;
+}
+.box2 h1{
+    margin-left: 15%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.contain{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.contain label{
+    font-size: 18px;
+}
+.contain input{
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px rgb(124, 123, 123) solid;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+.reminder{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}.but{
+    width: 100%;
+    margin-top: 20px;
+}
+.box2 .but input{
+    width: 15%;
+    height: 30px;
+    border-radius: 3px;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+}
+#reset{
+    margin-left: 15%;
+}
+.bottom{
+    width: 100%;
+}
+.bottom p{
+    margin-left: 15%;
+    margin-top: 25px;
+    font-size: 17px;
+}
+.bottom a{
+ text-decoration: none;
+ color: blue;
+
+}
+
+
+.msg{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+.msg1{
+    background-color:  #4BB543;
+    opacity: 0.8;
+    color:white;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin: 0;
+}
+.msg2{
+    background-color: #F32013;
+    opacity: 0.8;
+    color:white;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    margin: 0;
+}
+.msg2 h3{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+.msg1 h3{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+}
+

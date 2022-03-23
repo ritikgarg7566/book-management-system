@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>add book</title>
+  <link rel="stylesheet" href="{% static 'css/addbook.css' %}">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="header">
+      <h1 >Add Book</h1>
+    </div>
+    <div class="box">
+      <form action="add2_book" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <dic class="con">
+          <div class="container">
+            <div class="contain">
+              <label for="">Book Title</label><br>
+              <input type="text" name="title" value="{{s.title}}" maxlength="20">
+            </div>
+            <div class="contain2">
+              <label for="">Book Category</label><br>
+              <input type="test" name="category" value="{{s.category}}" maxlength="20">
+            </div>
+          </div>
+          <div class="container">
+            <div class="contain">
+              <label for="">Author Name</label><br>
+              <input type="text" name="aname" value="{{s.aname}}" maxlength="20">
+            </div>
+            <div class="contain2">
+              <label for="">Publisher Name</label><br>
+              <input type="text" name="pname" value="{{s.pname}}" maxlength="20">
+            </div>
+          </div>
+          <div class="container">
+            <div class="contain">
+              <label for="">File Type</label><br>
+              <input type="text" name="filetype" value="{{s.filetype}}" maxlength="7">
+            </div>
+            <div class="contain2">
+              <label for="">File</label><br>
+              <input id='file'type="file" name="bookfile" accept=".pdf,.ppt,.doc" value="{{s.bookfile}}" required>
+            </div>
+          </div>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox">
+          <label for="">I Agree To The Library Terms of service and Privacy Policy </label>
+        </div>
+        <div class="but">
+          <input id="reset" type="reset" name="reset">
+          <input id="submit" type="submit" value="add book">
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
